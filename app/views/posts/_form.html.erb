@@ -23,3 +23,23 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<%= link_to 'Click Me', '#', id: 'clicker' %>
+
+<% content_for :footer do %>
+  <script>
+    // reset the 'click me' link text
+    function resetClickMe(){
+      $('#clicker').text("Click Me");
+    }
+
+    $(function(){
+
+      $('#clicker').click(function(){
+        $(this).text("Oh That Tickles");
+        setTimeout("resetClickMe()", 3000);
+      });
+
+    });
+  </script>
+<% end %>
