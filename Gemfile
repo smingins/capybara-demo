@@ -6,4 +6,5 @@ gem 'sqlite3'
 group :development, :test do
   gem "rspec-rails", ">= 2.6.1"
   gem "capybara", "~> 1.0.0"
+  gem 'thin'
 end
